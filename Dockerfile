@@ -16,4 +16,6 @@ RUN cmake -S . -B build \
     -DGGML_RPC=ON;
 RUN cmake --build build -j $(nproc) --target rpc-server
 
+EXPOSE 8000/tcp
+
 ENTRYPOINT [ "/app/build/bin/rpc-server" ]
