@@ -18,4 +18,4 @@ RUN cmake --build build -j $(nproc) --target rpc-server
 
 EXPOSE 8000/tcp
 
-ENTRYPOINT [ "/app/build/bin/rpc-server" ]
+ENTRYPOINT [ "/app/build/bin/rpc-server", "-H", "127.0.0.1" ]
