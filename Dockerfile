@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:25.10
 
 RUN apt update && \
     apt install -y g++ cmake libcurl4-openssl-dev
